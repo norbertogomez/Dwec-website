@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Muay Thay</title>  
+  <!-- Default CSS -->
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/fgx-foundation.css" />
+  
+  <!-- Font Awesome - Retina Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome/css/font-awesome.min.css" />
+  
+  <!-- Google Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/scriptjq.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<!-- Begin Main Wrapper -->
+<div class="main-wrapper">
+  <header class="row bottom-header">
+    <div class="large-12 columns center">
+      <img src="images/logo.png" alt="Muay Thay" width="500" height="115" />
+      <div id="login">
+        <form id="formlogin">
+          <label>Usuario: </label>
+            <input type="text" name="usu">
+            <label>Contrase&ntilde;a:</label>
+            <input type="password" name="pass">
+            <input type="button" value="Iniciar Sesion" id="blogin">
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation -->  
+  <div class="row main-navigation">
+    <div class="large-12 columns">      
+
+      <nav id="nav">
+        <section class="top-bar-section">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deportes.html">Deporte</a></li>
+                <li id="dd1">
+                    <a href="#">Tecnicas</a>
+                    <ul id="sdd1">
+                        <li><a href="punos.html">Pu&ntilde;os</a></li>
+                        <li><a href="piernas.html">Piernas</a></li>
+                        <li><a href="codos.html">Codos</a></li>
+                        <li><a href="rodillas.html">Rodillas</a></li>
+                    </ul>
+                </li>
+                <li><a href="media.html">Media</a></li>
+                <li>
+                    <a href="galeria.html">Galeria</a>
+                </li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+            </section>
+      </nav>
+
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="large-12 columns main-content-top">
+      <div class="row">
+        <div class="large-6 columns">
+          <h2>Contacto</h2>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+
+	<div class="row main-content">
+
+    	<div class="large-12 columns">
+                     
+                    <img style="margin-bottom:20px" src="images/contact_image.jpg" />             
+                    
+                    <div class="large-6 columns">             
+                    
+                    <h4>CONTACTE CON NOSOTROS</h4>
+                    <p>Para un pedido m&aacute;s detallado de algun producto de nuestras marcas asociadas pidalo rellenando el siguiente formulario.</p>
+                	<form id="form1" method="post">
+                        <fieldset>
+                            <legend>Inscripcion: </legend>
+                          <div id="formcontent">
+                          <div id="divnom">
+                            <label for='idname' class='form_label_align'>Nombre: </label> 
+                            <input type="text" name='name' size="30px" class='form_input_align' title="Introduce tu nombre" placeholder="Introduce tu nombre" pattern="^[a-zA-Z][a-zA-Z]{1,20}$" required/>
+                          </div>
+                          <div class="divmail">
+                            <label for='idmail' class='form_label_align'>Mail: </label> 
+                            <input type="email" id='mail' name='mail' size="30px" class='form_input_align' title="Introduce tu email" placeholder="Introduce tu email" required/>
+                          </div>
+                          <div class="divtelf">
+                            <label for='idtelf' class='form_label_align'>Telefono: </label> 
+                            <input type="text" id='telf' name='telf' size="30px" class='form_input_align' title="Confirma el correo" placeholder="Vuelve a introducir el mail" pattern="\d{9}$"/>
+                          </div>
+                          <div id="divedad">
+                            <label for="idedad" class='form_label_align'>Edad: </label> 
+                            <input type="number" id='edad' width="30px" name='edad' min="16" max="80" size="30px" class='form_input_align' title="Introduce tu edad" placeholder="Introduce tu edad"/>
+                          </div>
+                          <div>
+                                <label for='centros' class='form_label_align'>Tienda Favorita: </label>
+                                <select id='centros' name='centros' class='form_input_align' title='Selecciona una opción'>
+                                    <option value='1'>Seleccionar...</option>
+                                    <optgroup label="Palma de Mallorca">
+                                        <option>Palma</option>
+                                        <option>Marratxi</option>
+                                        <option>Inca</option>
+                                    </optgroup>
+                                    <optgroup label="Madrid">
+                                        <option>Ciudad Pegaso</option>
+                                        <option>Barajas</option>
+                                        <option>Canillejas</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            </div>
+                            <div class='form_center' style="margin-top:10px;">
+                                <input type="submit" id="enviar" value="Enviar" class="button" title="Pulsa aqui para enviar"/>
+                                <input type="reset" value="Borrar" class='button' title="Pulsa aqui para restaurar" />
+                            </div>
+                        </fieldset>
+        		</form>
+                    </div>
+                    <div class="large-6 columns">             
+                    <h4>INFORMACI&Oacute;N</h4>                    
+                    <div class="contact-details">
+            		<p><span><i class="icon-home"></i>Direccion: </span>C/ Calle Falsa</p>
+            		<p><span><i class="icon-phone"></i>Telefono: </span> 971001122</p>
+            		<p><span><i class="icon-print"></i>Fax:</span> 310-555-2000</p>
+            		<p><span><i class="icon-envelope"></i>E-mail:</span><a href="mailto:norbertogomezbonnin@gmail.com"> Muay Thai</a></p>
+                    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;q=Calle+Falsa,+45908+Aldea+en+Cabo,+Toledo,+Castilla-La+Mancha&amp;aq=&amp;sll=39.367481,2.742513&amp;sspn=2.624374,5.410767&amp;t=h&amp;ie=UTF8&amp;geocode=FYAsZQIdV_m7_w&amp;split=0&amp;hq=&amp;hnear=Calle+Falsa,+45908+Aldea+en+Cabo,+Toledo&amp;z=14&amp;ll=40.18496,-4.458153&amp;output=embed"></iframe><br /><small></small>
+            		</div>
+                    </div>                           
+                    </div>
+        
+        </div>
+
+	</div>
+  <div class="row bottom-footer">
+    
+    <div class="large-6 columns">
+      <p>© 2013 Norberto Gomez, Muay Thay Website</p>
+    </div>
+    <div class="large-6 columns" style="padding-right:80px">
+        
+    </div>
+    
+  </div>
+  <a href="#" class="scrollup">Scroll</a>
+</body>
+</html>

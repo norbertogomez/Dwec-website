@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+ 	<meta name="viewport" content="width=device-width" />
+  <title>Muay Thay</title>  
+  <!-- Default CSS -->
+  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/fgx-foundation.css" />
+  
+  <!-- Font Awesome - Retina Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome/css/font-awesome.min.css" />
+  <!-- Google Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+  <script type="text/javascript" src="js/carrito.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/scriptjq.js"></script>
+  <script type="text/javascript">
+  window.addEventListener('load',calculos,false);
+    var vr0 = 'uniUser0';
+    var prod0 = locationVars(vr0);
+    var vr1 = 'uniUser1';
+    var prod1 = locationVars(vr1);
+    var vr2 = 'uniUser2';
+    var prod2 = locationVars(vr2);
+    var vr3 = 'uniUser3';
+    var prod3 = locationVars(vr3);
+    var vr4 = 'uniUser4';
+    var prod4 = locationVars(vr4);
+    var vr5 = 'uniUser5';
+    var prod5 = locationVars(vr5);
+    var vr6 = 'uniUser6';
+    var prod6 = locationVars(vr6);
+    var vr7 = 'uniUser7';
+    var prod7 = locationVars(vr7);
+    var vr8 = 'uniUser8';
+    var prod8 = locationVars(vr8);
+    var prodcant = [prod0, prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8];  
+    var precios = [80,35,45,20,15,5,20,12,45];
+    var productos = ["Guantes", "Pantalones", "Espinilleras","Rodilleras","Combas","Coquillas","Coderas","Bucales", "Chandal"];
+  function calculos(){
+		insRow();
+  }
+  function locationVars (vr){
+			var src = String( window.location.href ).split('?')[1];
+			var vrs = src.split('&');
+			for (var x = 0, c = vrs.length; x < c; x++){
+				if (vrs[x].indexOf(vr) != -1){
+					return decodeURI( vrs[x].split('=')[1]);
+				}
+			}
+	};
+	function insRow(){
+    var tabla = document.getElementById('carrito');
+    var fila = document.getElementById('carow');
+	var innertot = document.getElementById('inertot');
+	var total = 0;
+	var cont = 1;
+      for (var i = 0; i < prodcant.length; i++) {
+        if(prodcant[i]>0){
+          var filanueva = tabla.insertRow(fila.rowIndex+cont);
+		  cont = cont +1;
+		  var total = total + (precios[i]*prodcant[i]);
+          var newcell1 = filanueva.insertCell(0).innerHTML=productos[i];
+          var newcell2 = filanueva.insertCell(1).innerHTML=precios[i]*prodcant[i];
+          var newcell3 = filanueva.insertCell(2).innerHTML=prodcant[i];
+		 }
+      }
+	  innertot.insertCell(0).innerHTML = "<p>Precio Total: " + total + "&euro;</p>"; 
+	}
+  </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<!-- Begin Main Wrapper -->
+<div class="main-wrapper">
+  <header class="row bottom-header">
+    <div class="large-12 columns center">
+      <img src="images/logo.png" alt="Muay Thay" width="500" height="115" />
+      <div id="login">
+        <form id="formlogin">
+          <label>Usuario: </label>
+            <input type="text" name="usu">
+            <label>Contrase&ntilde;a:</label>
+            <input type="password" name="pass">
+            <input type="button" value="Iniciar Sesion" id="blogin">
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation -->  
+  <div class="row main-navigation">
+    <div class="large-12 columns">			
+
+      <nav class="top-bar">
+        <section class="top-bar-section">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="deporte.html">Deporte</a></li>
+                <li id="dd1">
+                    <a href="#">Tecnicas</a>
+                    <ul id="sdd1">
+                        <li><a href="punos.html">Pu&ntilde;os</a></li>
+                        <li><a href="piernas.html">Piernas</a></li>
+                        <li><a href="codos.html">Codos</a></li>
+                        <li><a href="rodillas.html">Rodillas</a></li>
+                    </ul>
+                </li>
+                <li><a href="media.html">Media</a></li>
+                <li>
+                    <a href="galeria.html">Galeria</a>
+                </li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+            </section>
+      </nav>
+    </div>
+  </div>
+	<div class="row">
+    <div class="large-12  columns">               
+      <div class="row">
+
+         <h1 class="center" style=" background-color: #222; border: 4px #444 solid">Bienvenido al mundo del <a href="#">Muay Thay</a></h1>
+         <div class="large-12 columns main-content-top">
+            <h2>Tienda</h2>
+            </div>
+            <div class="large-9 push-2"> 
+            <div class="row">
+           <div class="shadow"></div>
+			</div>
+            <article class="large-12 columns post" style="text-align:left;">
+         		<section id="productos">
+					<table id="carrito">
+            				<tr id="carow">
+                                <th width="200">Nombre</th>
+                                <th>Precio</th>
+                                <th width="150">Cantidad</th>
+            				</tr>
+                            <tr id="inertot">
+                            </tr>                                     	
+       				</table>
+                </section>
+				<div style="margin: 0 auto; clear:both;">
+                <button type="submit" id="boton" value="confirm">Confirmar</button></div>
+            </article>
+        </div>
+                
+      </div>
+      <!-- End Special Row -->   
+
+          <div class="shadow"></div>
+    	  </div>
+  </div>  
+  <footer class="row bottom-footer">
+    <div class="large-6 columns">
+      <p>© 2013 Norberto Gomez, Muay Thay Website</p>
+    </div>
+    <div class="large-6 columns" style="padding-right:80px">
+    </div>
+  </footer>
+</div>
+<a href="#" class="scrollup" style="display: inline;">Scroll</a>
+</body>
+</html>
